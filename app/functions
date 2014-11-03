@@ -1,0 +1,82 @@
+#!/usr/bin/env ruby
+require 'optparse'
+require 'ostruct'
+require 'pp'
+require File.dirname(__FILE__) + '/../lib/parser/parser'
+#require '../parser'
+
+class ScriptArgs
+  def self.parse(args)
+    options = OpenStruct.new
+    options.source = nil
+    options.libs = [] 
+    options.funct_name = true 
+    options.args_name = nil
+    options.return_type = nil
+    options.match = ".*" 
+
+    opt_parser = OptionParser.new do |opts|
+      opts.banner = "Usage : functions [options] source_file"
+      opts.on("-I", "--directory dir", String,  "Add a directory to the list of directories to be searched for header files") do |lib|
+        options.libs << lib
+      end
+      opts.on("-l", "--library lib", String, "Add a library name, the header files are found with pkg-config") do |lib|
+        options.libs.concat( `pkg-config --cflags #{lib}`.gsub("-I","").split(" ") )
+      end
+      opts.on("-f", "--function", "Apply match pattern to the function name") do |o|
+        options.funct_name = true
+        options.args_name = false
+        options.return_type = false 
+      end
+      opts.on("-a", "--args", "Apply match pattern to the arguments names") do |o|
+        options.funct_name = false
+        options.args_name = true
+        options.return_type = false 
+      end
+      opts.on("-r", "--return", "Apply match pattern to the return_typee") do |o|
+        options.funct_name = false
+        options.args_name = false
+        options.return_type = true
+      end
+      opts.on("-m", "--match pattern", String, "The regex used to filter the functions") do |o|
+        options.match = o
+      end
+      opts.on_tail("-h", "--help","Show this message") do 
+        puts opts
+        exit
+      end
+    end
+    opt_parser.parse!(args)
+    options
+  end
+end
+
+options = ScriptArgs.parse(ARGV)
+
+if ARGV.size != 1
+  puts "You should at least give a source file to parse see help (-h or --help)"
+  exit
+end
+parser = Parser::HeaderParser.new(ARGV[0], options.libs)
+parser.parse
+functions = parser.getFunctions
+if options.funct_name
+  functions.delete_if { |f| !(f.getName =~ /#{options.match}/) }
+elsif options.args_name
+  functions.delete_if do |f|
+    match = false
+    f.getParameters.each do |p|
+      match = true if (p.getType.getName =~ /#{options.match}/)
+    end
+    !match
+  end
+end
+
+functions.each do |f|
+  params = "\t"
+  f.getParameters.each do |p|
+    params << "#{p.getType.getName} #{p.getName},"
+  end
+  puts "#{f.getReturn.getName}  #{f.getName} #{params}"
+#  puts f.getRaw(parser)
+end  

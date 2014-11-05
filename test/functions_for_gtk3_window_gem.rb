@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + "/../lib/rtruckboris/rtruckboris"
+require 'rtruckboris'
+#require "/home/cedlemo/.gem/ruby/2.1.0/gems/rtruckboris-0.0.1/lib/rtruckboris/rtruckboris"
 
 gtk_window = "/usr/include/gtk-3.0/gtk/gtkwindow.h"
 headerPaths = `pkg-config --cflags gtk+-3.0`.gsub("-I","").split(" ")

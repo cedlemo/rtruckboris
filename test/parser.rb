@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require File.dirname(__FILE__) + '/../parser'
 
-parser = Parser::HeaderParser.new("./test_cpp", ["/usr/include"])
+parser = Rtruckboris::HeaderParser.new("./test_cpp", ["/usr/include"])
 parser.parse
 parser.printFunctionsNames()
 puts "Function : " + parser.getFunctionsNumber().to_s

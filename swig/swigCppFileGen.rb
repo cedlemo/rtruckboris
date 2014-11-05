@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'tempfile'
 swig_dir = File.dirname(__FILE__)
-cpp_source_file = swig_dir + '/../ext/parser/parser.cpp'
+cpp_source_file = swig_dir + '/../ext/rtruckboris/rtruckboris.cpp'
 swig_file = File.open(cpp_source_file)
 tmp1 = Tempfile.new('tmp1')
 tmp2 = Tempfile.new('tmp2')

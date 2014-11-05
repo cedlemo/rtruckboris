@@ -1,29 +1,10 @@
-%module parser
+%module rtruckboris 
 %include "std_string.i"
 %include "std_vector.i"
 %{
 /*--SWIGINCLUDE*/
 /*includes for the compiler*/
-#include "clang/AST/AST.h"
-#include "clang/AST/ASTConsumer.h"
-#include "clang/Parse/ParseAST.h"
-#include "clang/Frontend/CompilerInstance.h"
-#include "clang/Frontend/Utils.h"
-#include "clang/Basic/TargetInfo.h"
-#include "llvm/Support/Host.h"
-#include "clang/Lex/Preprocessor.h"
-#include "clang/Lex/HeaderSearch.h"
-#include "clang/AST/AST.h"
-#include "clang/AST/ASTContext.h"
-#include "clang/Parse/Parser.h"
-
-#include "TruckBoris/Type.h"
-#include "TruckBoris/Declarations.h"
-#include "TruckBoris/Function.h"
-#include "TruckBoris/HeaderElements.h"
-//#include "gears.h"
-#include "TruckBoris/HeaderParser.h"
-//#include "dbg.h"
+#include "HeaderParser.h"
 /*--ENDSWIGINCLUDE*/
 %}
 
@@ -62,9 +43,9 @@ namespace std {
 %rename($ignore) TruckBoris::Type::Equals(const Type& tpe);
 %rename($ignore) TruckBoris::Type::setType(const clang::QualType & type);
 %rename($ignore) TruckBoris::HeaderParser::getClasses() const;
-%include "../ext/parser/TruckBoris/Type.h"
-%include "../ext/parser/TruckBoris/Declarations.h"
-%include "../ext/parser/TruckBoris/Function.h"
-%import "../ext/parser/TruckBoris/HeaderElements.h"
-%include "../ext/parser/TruckBoris/HeaderParser.h"
+%include "/usr/include/truckboris/Type.h"
+%include "/usr/include/truckboris/Declarations.h"
+%include "/usr/include/truckboris/Function.h"
+%import "/usr/include/truckboris/HeaderElements.h"
+%include "/usr/include/truckboris/HeaderParser.h"
 

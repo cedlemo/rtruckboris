@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + "/../lib/parser/parser"
+require File.dirname(__FILE__) + "/../lib/rtruckboris/rtruckboris"
 
-parser = Parser::HeaderParser.new("./test_cpp", ["/usr/include"])
+parser = Rtruckboris::HeaderParser.new("./test_cpp", ["/usr/include"])
 if (!parser.parse) then 
   puts "Whada fock??"
   exit

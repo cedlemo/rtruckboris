@@ -1,19 +1,25 @@
 require "rake/extensiontask"
-#spec = Gem::Specification.load('parser.gemspec')
 
 current_dir = File.dirname(__FILE__)
-src_dir = current_dir + "/ext/parser"
+src_dir = current_dir + "/ext/rtruckboris"
 swig_dir = current_dir + "/swig"
 task :swig do 
-  puts "==> Generate the parser.cpp file with swig"
-  sh "swig -c++ -ruby -o #{src_dir}/parser.cpp #{swig_dir}/parser.i"
+  puts "==> Generate the rtruckboris.cpp file with swig"
+  sh "swig -c++ -ruby -o #{src_dir}/rtruckboris.cpp #{swig_dir}/rtruckboris.i"
   sh "ruby #{swig_dir}/swigCppFileGen.rb"
 end
 
-task :compile => :swig
+task :compile => :swig do 
+  puts "Compile time!! bitch..."
+end
+spec = Gem::Specification.load('rtruckboris.gemspec')
 
-Rake::ExtensionTask::new("parser") do |ext|
-  ext.lib_dir = "lib/parser"
+Gem::PackageTask.new(spec) do |pkg|
+end
+
+# feed the ExtensionTask with your spec
+Rake::ExtensionTask::new("rtruckboris", spec) do |ext|
+  ext.lib_dir = "lib/rtruckboris"
 end
  
 

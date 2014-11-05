@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + "/../lib/parser/parser"
+require File.dirname(__FILE__) + "/../lib/rtruckboris/rtruckboris"
 
 evas = "/usr/include/evas-1/Evas.h"
 headerPaths = `pkg-config --cflags evas`.gsub("-I","").split(" ")
@@ -10,7 +10,7 @@ headerPaths = `pkg-config --cflags evas`.gsub("-I","").split(" ")
 #gccLib = Dir.glob(gccLibBase ).sort.last + "/include"
 #headerPaths << gccLib
 
-parser = Parser::HeaderParser.new(evas, headerPaths)
+parser = Rtruckboris::HeaderParser.new(evas, headerPaths)
 parser.parse
 structures = parser.getStructures()
 puts "Structures number : #{structures.size}"

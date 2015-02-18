@@ -7,7 +7,8 @@
 #include "HeaderParser.h"
 /*--ENDSWIGINCLUDE*/
 %}
-
+%trackobjects;
+//%markfunc HeaderParser "mark_HeaderParser";
 namespace std {
   %template(VectorEnum) vector<TruckBoris::Enum>;
   %template(VectorEnumConstant) vector<TruckBoris::EnumConstant>;
@@ -43,9 +44,29 @@ namespace std {
 %rename($ignore) TruckBoris::Type::Equals(const Type& tpe);
 %rename($ignore) TruckBoris::Type::setType(const clang::QualType & type);
 %rename($ignore) TruckBoris::HeaderParser::getClasses() const;
+%rename($ignore) TruckBoris::HeaderParser::getFunctions() const;
 %include "/usr/include/truckboris/Type.h"
 %include "/usr/include/truckboris/Declarations.h"
 %include "/usr/include/truckboris/Function.h"
 %import "/usr/include/truckboris/HeaderElements.h"
 %include "/usr/include/truckboris/HeaderParser.h"
-
+//%header %{
+//static void mark_HeaderParser(void* ptr) {
+//  TruckBoris::HeaderParser* hp = (TruckBoris::HeaderParser*) ptr;
+//  /* Loop over each object and tell the garbage collector
+//  that we are holding a reference to them. */
+//  std::vector<TruckBoris::Function> fns;
+//  fns = hp->getFunctions();
+//  int count = fns.size();
+// 
+//  for(int i = 0; i < count; ++i) {
+//    TruckBoris::Function fn = fns[i];
+//  std::cout <<  "##########################---marked####################"<<fn.getName() << std::endl;
+//    VALUE object = SWIG_RubyInstanceFor(&fn);
+// 
+//    if (object != Qnil) {
+//      rb_gc_mark(object);
+//    }
+//  }
+//}
+//%}

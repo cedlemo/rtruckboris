@@ -7,16 +7,16 @@
 #include "HeaderParser.h"
 /*--ENDSWIGINCLUDE*/
 %}
-%trackobjects;
+//%trackobjects;
 //%markfunc HeaderParser "mark_HeaderParser";
 namespace std {
-  %template(VectorEnum) vector<TruckBoris::Enum>;
+//  %template(VectorEnum) vector<TruckBoris::Enum>;
   %template(VectorEnumConstant) vector<TruckBoris::EnumConstant>;
-  %template(VectorFunction) vector<TruckBoris::Function>;
+//  %template(VectorFunction) vector<TruckBoris::Function>;
   %template(VectorParameter) vector<TruckBoris::Parameter>;
-  %template(VectorStructure) vector<TruckBoris::Structure>;
+//  %template(VectorStructure) vector<TruckBoris::Structure>;
   %template(VectorField) vector<TruckBoris::Field>;
-  %template(VectorTypedef) vector<TruckBoris::Typedef>;
+//  %template(VectorTypedef) vector<TruckBoris::Typedef>;
   %template(VectorString) vector<string>;
 }; 
 %import "/usr/include/clang/AST/ASTConsumer.h"
@@ -45,6 +45,9 @@ namespace std {
 %rename($ignore) TruckBoris::Type::setType(const clang::QualType & type);
 %rename($ignore) TruckBoris::HeaderParser::getClasses() const;
 %rename($ignore) TruckBoris::HeaderParser::getFunctions() const;
+%rename($ignore) TruckBoris::HeaderParser::getEnums() const;
+%rename($ignore) TruckBoris::HeaderParser::getTypedefs() const;
+%rename($ignore) TruckBoris::HeaderParser::getUnions() const;
 %include "/usr/include/truckboris/Type.h"
 %include "/usr/include/truckboris/Declarations.h"
 %include "/usr/include/truckboris/Function.h"

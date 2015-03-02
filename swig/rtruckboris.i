@@ -28,8 +28,7 @@ namespace std {
 %rename($ignore) TruckBoris::Enum::getConstantsNumber() const;
 %rename($ignore) TruckBoris::Enum::getConstant(int i) const;
 %rename($ignore) TruckBoris::Function::setPtr(clang::FunctionDecl * fn);
-%rename($ignore) TruckBoris::Function::getParamsNumber() const;
-%rename($ignore) TruckBoris::Function::getParameter(int i) const;
+%rename($ignore) TruckBoris::Function::getParameters() const;
 %rename($ignore) TruckBoris::Function::Equals(const Function& fn);
 %rename($ignore) TruckBoris::TagDeclaration::setPtr(clang::TagDecl * var);
 %rename($ignore) TruckBoris::TagDeclaration::Equals( const TagDeclaration & tag);

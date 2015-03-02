@@ -32,3 +32,46 @@ class Rtruckboris::HeaderParser
     typedefs
   end
 end
+
+class Rtruckboris::Function
+  def to_s
+    "#{getReturn.getName} #{getName}(#{getParameters.map { |p|"#{p.getType.getName} #{p.getName}" }.join(',')})"
+  end
+  def getParameters
+    parameters=[]
+    (0..(nbParameters() -1)).each do |i|
+      parameters<<getParameter(i)
+    end
+    parameters
+  end
+end
+
+class Rtruckboris::TagDeclaration
+  def to_s
+    getName
+  end
+end
+
+class Rtruckboris::Typedef
+  def to_s
+    getName
+  end
+end
+
+class Rtruckboris::Field
+  def to_s
+    getName
+  end
+end
+
+class Rtruckboris::Type
+  def to_s
+    getName
+  end
+end
+
+class Rtruckboris::Parameter
+  def to_s
+    getName
+  end
+end

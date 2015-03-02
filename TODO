@@ -1,0 +1,3 @@
+*   add to_s method for HeaderParser class
+*   try to use module + extend for to_s of other class
+*   implement nbElements + getElement i instead of array for Fields in structure and Union and for Enum

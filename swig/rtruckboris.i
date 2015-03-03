@@ -13,7 +13,7 @@ namespace std {
 //  %template(VectorEnum) vector<TruckBoris::Enum>;
   %template(VectorEnumConstant) vector<TruckBoris::EnumConstant>;
 //  %template(VectorFunction) vector<TruckBoris::Function>;
-  %template(VectorParameter) vector<TruckBoris::Parameter>;
+//  %template(VectorParameter) vector<TruckBoris::Parameter>;
 //  %template(VectorStructure) vector<TruckBoris::Structure>;
   %template(VectorField) vector<TruckBoris::Field>;
 //  %template(VectorTypedef) vector<TruckBoris::Typedef>;

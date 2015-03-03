@@ -31,6 +31,9 @@ class Rtruckboris::HeaderParser
     end
     typedefs
   end
+  def to_s
+    "Source file: #{getSourceFile} with paths: #{getHeaderPaths}"
+  end
 end
 
 class Rtruckboris::Function
@@ -39,7 +42,7 @@ class Rtruckboris::Function
   end
   def getParameters
     parameters=[]
-    (0..(nbParameters() -1)).each do |i|
+    (0..(getParamsNumber() -1)).each do |i|
       parameters<<getParameter(i)
     end
     parameters

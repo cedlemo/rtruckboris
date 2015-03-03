@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + "/../lib/rtruckboris/rtruckboris"
+#require File.dirname(__FILE__) + "/../lib/rtruckboris"
+require "rtruckboris"
 
 parser = Rtruckboris::HeaderParser.new("./test_cpp", ["/usr/include"])
 parser.parse
@@ -13,7 +14,7 @@ functions.each do |f|
   params = f.getParameters
   puts "\t #{params.size.to_s} parameters :"
   params.each do |p|
-    puts "\t\t#{p.getType.getName}  #{p.getName}"
+   puts "\t\t#{p.getType.getName}  #{p.getName}"
     if(!p.getType.isCanonical)
       puts "\t\t\t#{p.getType.getCanonicalType.getName}"
     end

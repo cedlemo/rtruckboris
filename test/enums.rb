@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + "/../lib/rtruckboris/rtruckboris"
+require File.dirname(__FILE__) + "/../lib/rtruckboris"
 
 parser = Rtruckboris::HeaderParser.new("./test_cpp", ["/usr/include"])
 if (!parser.parse) then 

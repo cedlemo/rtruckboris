@@ -36,7 +36,7 @@ end
 rtruckboris is a ruby extension for the truckboris library so you need to install
 it (https://github.com/cedlemo/truckboris) and its dependencies (LLVM and Clang 3.5).
 
-You will need to:
+You will need to install :
 *    Ruby
 *    Rake-compiler
 *    swig
@@ -57,7 +57,7 @@ Then create the gem for your platform:
 After the compilation step, there is a new directory "pkg" that have been created.
 You can now install the rtruckboris gem with:
 
-<code>gem install pkg/rtruckboris-1.0.0.gem</code>
+<code>gem install pkg/rtruckboris-x.x.x-platform.gem</code>
 
 ### Usage 
 

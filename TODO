@@ -1,1 +1,14 @@
-*   implement nbElements + getElement i instead of array for Fields in structure and Union and for Enum
+*   use rename directive in swig for mor ruby names
+    getFunctions              functions
+    getStructures             structures
+    getEnums                  enums
+    getUnions                 unions
+    getTypedefs               typedefs
+    
+    getName                   name
+    getType                   type
+    getFields                 fields
+    getParameters             parameters
+    getConstants              enum_constants
+    Equals                    =
+*   check for others functions to rename

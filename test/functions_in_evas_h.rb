@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + "/../lib/rtruckboris/rtruckboris"
+require File.dirname(__FILE__) + "/../lib/rtruckboris"
 
 evas = "/usr/include/evas-1/Evas.h"
 headerPaths = `pkg-config --cflags evas`.gsub("-I","").split(" ")

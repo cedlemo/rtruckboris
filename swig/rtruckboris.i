@@ -11,22 +11,22 @@
 //%markfunc HeaderParser "mark_HeaderParser";
 namespace std {
 //  %template(VectorEnum) vector<TruckBoris::Enum>;
-  %template(VectorEnumConstant) vector<TruckBoris::EnumConstant>;
+//  %template(VectorEnumConstant) vector<TruckBoris::EnumConstant>;
 //  %template(VectorFunction) vector<TruckBoris::Function>;
 //  %template(VectorParameter) vector<TruckBoris::Parameter>;
 //  %template(VectorStructure) vector<TruckBoris::Structure>;
-  %template(VectorField) vector<TruckBoris::Field>;
+//  %template(VectorField) vector<TruckBoris::Field>;
 //  %template(VectorTypedef) vector<TruckBoris::Typedef>;
   %template(VectorString) vector<string>;
 }; 
 %import "/usr/include/clang/AST/ASTConsumer.h"
 %rename($ignore) *::getPtr() const;
 %rename($ignore) TruckBoris::Structure::Equals(const Structure& tag);
-%rename($ignore) TruckBoris::Structure::getField(int) const;
-%rename($ignore) TruckBoris::Structure::getFieldsNumber() const;
+//%rename($ignore) TruckBoris::Structure::getField(int) const;
+//%rename($ignore) TruckBoris::Structure::getFieldsNumber() const;
 %rename($ignore) TruckBoris::Enum::Equals(const Enum& tag);
-%rename($ignore) TruckBoris::Enum::getConstantsNumber() const;
-%rename($ignore) TruckBoris::Enum::getConstant(int i) const;
+//%rename($ignore) TruckBoris::Enum::getConstantsNumber() const;
+//%rename($ignore) TruckBoris::Enum::getConstant(int i) const;
 %rename($ignore) TruckBoris::Function::setPtr(clang::FunctionDecl * fn);
 %rename($ignore) TruckBoris::Function::getParameters() const;
 %rename($ignore) TruckBoris::Function::Equals(const Function& fn);
@@ -42,11 +42,6 @@ namespace std {
 %rename($ignore) TruckBoris::Field::setPtr(clang::FieldDecl * var);
 %rename($ignore) TruckBoris::Type::Equals(const Type& tpe);
 %rename($ignore) TruckBoris::Type::setType(const clang::QualType & type);
-%rename($ignore) TruckBoris::HeaderParser::getClasses() const;
-%rename($ignore) TruckBoris::HeaderParser::getFunctions() const;
-%rename($ignore) TruckBoris::HeaderParser::getEnums() const;
-%rename($ignore) TruckBoris::HeaderParser::getTypedefs() const;
-%rename($ignore) TruckBoris::HeaderParser::getUnions() const;
 %include "/usr/include/truckboris/Type.h"
 %include "/usr/include/truckboris/Declarations.h"
 %include "/usr/include/truckboris/Function.h"

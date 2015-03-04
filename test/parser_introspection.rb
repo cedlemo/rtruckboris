@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + "/../lib/rtruckboris/rtruckboris"
+require File.dirname(__FILE__) + "/../lib/rtruckboris"
 
-classes = Parser.constants.select {|c| Class === Parser.const_get(c)}
+classes = Rtruckboris.constants.select {|c| Class === Rtruckboris.const_get(c)}
 puts "Classes Names"
 classes.each do |c|
   puts "\t#{c}"

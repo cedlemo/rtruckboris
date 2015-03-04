@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-#require File.dirname(__FILE__) + "/../lib/rtruckboris"
-require "rtruckboris"
+require File.dirname(__FILE__) + "/../lib/rtruckboris"
+#require "rtruckboris"
 
 parser = Rtruckboris::HeaderParser.new("./test_cpp", ["/usr/include"])
 parser.parse

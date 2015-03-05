@@ -6,14 +6,14 @@ require "rtruckboris"
 parser = Rtruckboris::HeaderParser.new("./test_cpp", ["/usr/include"])
 parser.parse
 
-structures = parser.getStructures()
+structures = parser.structures()
 puts "Structures number : #{structures.size}"
 structures.each do |s|
   puts "Structure Name : #{s.name}"
   puts "\thas name for linkage ? #{s.has_name_for_linkage}"  
   puts "\thas linkage ? #{s.has_linkage}"  
   puts "\ttypedef name: #{s.typedef_name}"
-  fields = s.getFields
+  fields = s.fields
   puts "\tfield number: #{fields.size}"
   fields.each do |f|
     puts "\t\t #{f.type.name}  #{f.name}"

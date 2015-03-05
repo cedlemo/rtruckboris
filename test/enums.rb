@@ -9,14 +9,14 @@ if (!parser.parse) then
   exit
 end
 
-enums = parser.getEnums()
+enums = parser.enums()
 puts "Enums number : #{enums.size}"
 enums.each do |e|
   puts "Enum Name : #{e.name}"
   puts "\thas name for linkage ? #{e.has_name_for_linkage}"  
   puts "\thas linkage ? #{e.has_linkage}"  
   puts "\ttypedef name: #{e.typedef_name}"
-  constants = e.getConstants
+  constants = e.enum_constants
   print "\t\t"
   constants.each do |c|
     print "#{c.name} #{c.value}  "

@@ -5,7 +5,7 @@ require File.dirname(__FILE__) + "/../lib/rtruckboris"
 parser = Rtruckboris::HeaderParser.new("./test_cpp", ["/usr/include"])
 parser.parse
 
-typedefs = parser.getTypedefs()
+typedefs = parser.typedefs()
 puts "Typedefs numbers : #{typedefs.size}"
 typedefs.each do |t|
   puts "Typedef Name : #{t.name}"

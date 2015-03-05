@@ -9287,7 +9287,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Structure_nbFields(int argc, VALUE *argv, VALUE self) {
+_wrap_Structure_fields_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Structure *arg1 = (TruckBoris::Structure *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9311,7 +9311,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Structure_getField(int argc, VALUE *argv, VALUE self) {
+_wrap_Structure_get_nth_field(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Structure *arg1 = (TruckBoris::Structure *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -9496,7 +9496,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Union_nbFields(int argc, VALUE *argv, VALUE self) {
+_wrap_Union_fields_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Union *arg1 = (TruckBoris::Union *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9520,7 +9520,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Union_getField(int argc, VALUE *argv, VALUE self) {
+_wrap_Union_get_nth_field(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Union *arg1 = (TruckBoris::Union *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -9812,7 +9812,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Enum_nbConstants(int argc, VALUE *argv, VALUE self) {
+_wrap_Enum_constants_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Enum *arg1 = (TruckBoris::Enum *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9836,7 +9836,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Enum_getConstant(int argc, VALUE *argv, VALUE self) {
+_wrap_Enum_get_nth_enum_constant(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Enum *arg1 = (TruckBoris::Enum *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -10034,7 +10034,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Function_nbParameters(int argc, VALUE *argv, VALUE self) {
+_wrap_Function_parameters_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Function *arg1 = (TruckBoris::Function *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10058,7 +10058,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Function_getParameter(int argc, VALUE *argv, VALUE self) {
+_wrap_Function_get_nth_parameter(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Function *arg1 = (TruckBoris::Function *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -10490,7 +10490,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_nbFunctions(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_functions_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10514,7 +10514,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_getFunction(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_get_nth_function(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -10546,7 +10546,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_nbStructures(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_structures_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10570,7 +10570,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_getStructure(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_get_nth_structure(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -10602,7 +10602,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_nbUnions(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_unions_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10626,7 +10626,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_getUnion(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_get_nth_union(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -10658,7 +10658,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_nbEnums(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_enums_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10682,7 +10682,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_getEnum(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_get_nth_enum(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -10714,7 +10714,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_nbTypedefs(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_typedefs_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10738,7 +10738,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_getTypedef(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_get_nth_typedef(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -11441,8 +11441,8 @@ SWIGEXPORT void Init_rtruckboris(void) {
   rb_define_alloc_func(SwigClassStructure.klass, _wrap_Structure_allocate);
   rb_define_method(SwigClassStructure.klass, "initialize", VALUEFUNC(_wrap_new_Structure), -1);
   rb_define_method(SwigClassStructure.klass, "tag_type", VALUEFUNC(_wrap_Structure_tag_type), -1);
-  rb_define_method(SwigClassStructure.klass, "nbFields", VALUEFUNC(_wrap_Structure_nbFields), -1);
-  rb_define_method(SwigClassStructure.klass, "getField", VALUEFUNC(_wrap_Structure_getField), -1);
+  rb_define_method(SwigClassStructure.klass, "fields_num", VALUEFUNC(_wrap_Structure_fields_num), -1);
+  rb_define_method(SwigClassStructure.klass, "get_nth_field", VALUEFUNC(_wrap_Structure_get_nth_field), -1);
   SwigClassStructure.mark = 0;
   SwigClassStructure.destroy = (void (*)(void *)) free_TruckBoris_Structure;
   SwigClassStructure.trackObjects = 0;
@@ -11453,8 +11453,8 @@ SWIGEXPORT void Init_rtruckboris(void) {
   rb_define_method(SwigClassUnion.klass, "initialize", VALUEFUNC(_wrap_new_Union), -1);
   rb_define_method(SwigClassUnion.klass, "Equals", VALUEFUNC(_wrap_Union_Equals), -1);
   rb_define_method(SwigClassUnion.klass, "tag_type", VALUEFUNC(_wrap_Union_tag_type), -1);
-  rb_define_method(SwigClassUnion.klass, "nbFields", VALUEFUNC(_wrap_Union_nbFields), -1);
-  rb_define_method(SwigClassUnion.klass, "getField", VALUEFUNC(_wrap_Union_getField), -1);
+  rb_define_method(SwigClassUnion.klass, "fields_num", VALUEFUNC(_wrap_Union_fields_num), -1);
+  rb_define_method(SwigClassUnion.klass, "get_nth_field", VALUEFUNC(_wrap_Union_get_nth_field), -1);
   SwigClassUnion.mark = 0;
   SwigClassUnion.destroy = (void (*)(void *)) free_TruckBoris_Union;
   SwigClassUnion.trackObjects = 0;
@@ -11474,8 +11474,8 @@ SWIGEXPORT void Init_rtruckboris(void) {
   rb_define_alloc_func(SwigClassEnum.klass, _wrap_Enum_allocate);
   rb_define_method(SwigClassEnum.klass, "initialize", VALUEFUNC(_wrap_new_Enum), -1);
   rb_define_method(SwigClassEnum.klass, "tag_type", VALUEFUNC(_wrap_Enum_tag_type), -1);
-  rb_define_method(SwigClassEnum.klass, "nbConstants", VALUEFUNC(_wrap_Enum_nbConstants), -1);
-  rb_define_method(SwigClassEnum.klass, "getConstant", VALUEFUNC(_wrap_Enum_getConstant), -1);
+  rb_define_method(SwigClassEnum.klass, "constants_num", VALUEFUNC(_wrap_Enum_constants_num), -1);
+  rb_define_method(SwigClassEnum.klass, "get_nth_enum_constant", VALUEFUNC(_wrap_Enum_get_nth_enum_constant), -1);
   SwigClassEnum.mark = 0;
   SwigClassEnum.destroy = (void (*)(void *)) free_TruckBoris_Enum;
   SwigClassEnum.trackObjects = 0;
@@ -11487,8 +11487,8 @@ SWIGEXPORT void Init_rtruckboris(void) {
   rb_define_method(SwigClassFunction.klass, "name", VALUEFUNC(_wrap_Function_name), -1);
   rb_define_method(SwigClassFunction.klass, "isMain", VALUEFUNC(_wrap_Function_isMain), -1);
   rb_define_method(SwigClassFunction.klass, "return_type", VALUEFUNC(_wrap_Function_return_type), -1);
-  rb_define_method(SwigClassFunction.klass, "nbParameters", VALUEFUNC(_wrap_Function_nbParameters), -1);
-  rb_define_method(SwigClassFunction.klass, "getParameter", VALUEFUNC(_wrap_Function_getParameter), -1);
+  rb_define_method(SwigClassFunction.klass, "parameters_num", VALUEFUNC(_wrap_Function_parameters_num), -1);
+  rb_define_method(SwigClassFunction.klass, "get_nth_parameter", VALUEFUNC(_wrap_Function_get_nth_parameter), -1);
   rb_define_method(SwigClassFunction.klass, "raw", VALUEFUNC(_wrap_Function_raw), -1);
   SwigClassFunction.mark = 0;
   SwigClassFunction.destroy = (void (*)(void *)) free_TruckBoris_Function;
@@ -11504,16 +11504,16 @@ SWIGEXPORT void Init_rtruckboris(void) {
   rb_define_method(SwigClassHeaderParser.klass, "parse", VALUEFUNC(_wrap_HeaderParser_parse), -1);
   rb_define_method(SwigClassHeaderParser.klass, "lang_opts", VALUEFUNC(_wrap_HeaderParser_lang_opts), -1);
   rb_define_method(SwigClassHeaderParser.klass, "source_manager", VALUEFUNC(_wrap_HeaderParser_source_manager), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "nbFunctions", VALUEFUNC(_wrap_HeaderParser_nbFunctions), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "getFunction", VALUEFUNC(_wrap_HeaderParser_getFunction), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "nbStructures", VALUEFUNC(_wrap_HeaderParser_nbStructures), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "getStructure", VALUEFUNC(_wrap_HeaderParser_getStructure), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "nbUnions", VALUEFUNC(_wrap_HeaderParser_nbUnions), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "getUnion", VALUEFUNC(_wrap_HeaderParser_getUnion), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "nbEnums", VALUEFUNC(_wrap_HeaderParser_nbEnums), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "getEnum", VALUEFUNC(_wrap_HeaderParser_getEnum), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "nbTypedefs", VALUEFUNC(_wrap_HeaderParser_nbTypedefs), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "getTypedef", VALUEFUNC(_wrap_HeaderParser_getTypedef), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "functions_num", VALUEFUNC(_wrap_HeaderParser_functions_num), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "get_nth_function", VALUEFUNC(_wrap_HeaderParser_get_nth_function), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "structures_num", VALUEFUNC(_wrap_HeaderParser_structures_num), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "get_nth_structure", VALUEFUNC(_wrap_HeaderParser_get_nth_structure), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "unions_num", VALUEFUNC(_wrap_HeaderParser_unions_num), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "get_nth_union", VALUEFUNC(_wrap_HeaderParser_get_nth_union), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "enums_num", VALUEFUNC(_wrap_HeaderParser_enums_num), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "get_nth_enum", VALUEFUNC(_wrap_HeaderParser_get_nth_enum), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "typedefs_num", VALUEFUNC(_wrap_HeaderParser_typedefs_num), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "get_nth_typedef", VALUEFUNC(_wrap_HeaderParser_get_nth_typedef), -1);
   rb_define_method(SwigClassHeaderParser.klass, "getSourceFile", VALUEFUNC(_wrap_HeaderParser_getSourceFile), -1);
   rb_define_method(SwigClassHeaderParser.klass, "getHeadersPaths", VALUEFUNC(_wrap_HeaderParser_getHeadersPaths), -1);
   rb_define_method(SwigClassHeaderParser.klass, "getClasses", VALUEFUNC(_wrap_HeaderParser_getClasses), -1);

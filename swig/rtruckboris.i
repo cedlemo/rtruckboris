@@ -26,6 +26,9 @@ namespace std {
 %rename(canonical_type) getCanonicalType;
 %rename(source_manager) getSourceManager;
 %rename(lang_opts) getLangOpts;
+%rename("%(regex:/^(nb)([A-Z]+.*)/\\l\\2_num/)s") "";
+%rename("%(regex:/^(get)(Function|Enum|Union|Structure|Typedef|Field|Parameter)+/\\1_nth_\\l\\2/)s") "";
+%rename(get_nth_enum_constant) getConstant;
 //%rename($ignore) TruckBoris::Structure::getField(int) const;
 //%rename($ignore) TruckBoris::Structure::getFieldsNumber() const;
 %rename($ignore) TruckBoris::Enum::Equals(const Enum& tag);

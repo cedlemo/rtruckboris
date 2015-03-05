@@ -12,7 +12,7 @@ headerPaths = `pkg-config --cflags evas`.gsub("-I","").split(" ")
 
 parser = Rtruckboris::HeaderParser.new(evas, headerPaths)
 parser.parse
-structures = parser.getStructures()
+structures = parser.structures()
 puts "Structures number : #{structures.size}"
 structures.each do |s|
   puts "Structure Name : #{s.name}"
@@ -26,12 +26,12 @@ structures.each do |s|
 #  end
 end
 
-functions = parser.getFunctions()
+functions = parser.functions()
 puts "Functions number : #{functions.size}"
 functions.each do |f|
   puts "Name : #{f.name}"
   puts "Return : #{f.return_type.name}"
-  params = f.getParameters
+  params = f.parameters
   puts "\t #{params.size.to_s} parameters :"
   params.each do |p|
     puts "\t\t#{p.type.name}  #{p.name}"

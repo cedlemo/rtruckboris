@@ -5,12 +5,12 @@ require "rtruckboris"
 parser = Rtruckboris::HeaderParser.new("./test_cpp", ["/usr/include"])
 parser.parse
 
-functions = parser.getFunctions()
+functions = parser.functions()
 puts "Functions number : #{functions.size}"
 functions.each do |f|
   puts "Name : #{f.name}"
   puts "Return : #{f.return_type.name}"
-  params = f.getParameters
+  params = f.parameters
   puts "\t #{params.size.to_s} parameters :"
   params.each do |p|
    puts "\t\t#{p.type.name}  #{p.name}"

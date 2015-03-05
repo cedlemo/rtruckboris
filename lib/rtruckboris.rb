@@ -3,40 +3,40 @@
 require 'rtruckboris/rtruckboris'
 
 class Rtruckboris::HeaderParser
-  def getFunctions
-    functions=[]
-    (0..(nbFunctions() -1)).each do |i|
-      functions<<getFunction(i)
+  def functions
+    fns=[]
+    (0..(functions_num() -1)).each do |i|
+      fns<<get_nth_function(i)
     end
-    functions
+    fns
   end
-  def getUnions
-    unions=[]
-    (0..(nbUnions() -1)).each do |i|
-      unions<<getUnion(i)
+  def unions
+    us=[]
+    (0..(unions_num() -1)).each do |i|
+      us<<get_nth_union(i)
     end
-    unions
+    us
   end
-  def getEnums
-    enums=[]
-    (0..(nbEnums() -1)).each do |i|
-      enums<<getEnum(i)
+  def enums
+    es=[]
+    (0..(enums_num() -1)).each do |i|
+      es<<get_nth_enum(i)
     end
-    enums
+    es
   end
-  def getTypedefs
-    typedefs=[]
-    (0..(nbTypedefs() -1)).each do |i|
-      typedefs<<getTypedef(i)
+  def typedefs
+    tfs=[]
+    (0..(typedefs_num() -1)).each do |i|
+      tfs<<get_nth_typedef(i)
     end
-    typedefs
+    tfs
   end
-  def getStructures
-    structures=[]
-    (0..(nbStructures() -1)).each do |i|
-      structures<<getStructure(i)
+  def structures
+    stt=[]
+    (0..(structures_num() -1)).each do |i|
+      stt<<get_nth_structure(i)
     end
-    structures
+    stt
   end
   def to_s
     "Source file: #{getSourceFile} with paths: #{getHeaderPaths}"
@@ -45,14 +45,14 @@ end
 
 class Rtruckboris::Function
   def to_s
-    "#{getReturn.getName} #{getName}(#{getParameters.map { |p|"#{p.getType.getName} #{p.getName}" }.join(',')})"
+    "#{return_type.name} #{name}(#{parameters.map { |p|"#{p.type.name} #{p.name}" }.join(',')})"
   end
-  def getParameters
-    parameters=[]
-    (0..(nbParameters() - 1)).each do |i|
-      parameters<<getParameter(i)
+  def parameters
+    pms=[]
+    (0..(parameters_num() - 1)).each do |i|
+      pms<<get_nth_parameter(i)
     end
-    parameters
+    pms
   end
 end
 
@@ -62,28 +62,28 @@ class Rtruckboris::TagDeclaration
   end
 end
 class Rtruckboris::Structure
-  def getFields
-    fields=[]
-    (0..(nbFields() -1)).each do |i|
-      fields<<getField(i)
+  def fields
+    fs=[]
+    (0..(fields_num() -1)).each do |i|
+      fs<<get_nth_field(i)
     end
-    fields
+    fs
   end
 end
 class Rtruckboris::Union
-  def getFields
-    fields=[]
-    (0..(nbFields() -1)).each do |i|
-      fields<<getField(i)
+  def fields
+    fs=[]
+    (0..(fields_enum() -1)).each do |i|
+      fs<<get_nth_field(i)
     end
-    fields
+    fs
   end
 end
 class Rtruckboris::Enum
-  def getConstants
+  def enum_constants
     econstants=[]
-    (0..(nbConstants() -1)).each do |i|
-      econstants<<getConstant(i)
+    (0..(constants_num() -1)).each do |i|
+      econstants<<get_nth_enum_constant(i)
     end
     econstants
   end

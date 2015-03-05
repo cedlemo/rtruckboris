@@ -39,7 +39,7 @@ class Rtruckboris::HeaderParser
     stt
   end
   def to_s
-    "Source file: #{getSourceFile} with paths: #{getHeaderPaths}"
+    "Source file: #{get_source_file} with paths: #{get_header_paths}"
   end
 end
 
@@ -58,7 +58,7 @@ end
 
 class Rtruckboris::TagDeclaration
   def to_s
-    getName
+    name
   end
 end
 class Rtruckboris::Structure
@@ -90,24 +90,24 @@ class Rtruckboris::Enum
 end
 class Rtruckboris::Typedef
   def to_s
-    getName
+    name
   end
 end
 
 class Rtruckboris::Field
   def to_s
-    getName
+    name
   end
 end
 
 class Rtruckboris::Type
   def to_s
-    getName
+    name
   end
 end
 
 class Rtruckboris::Parameter
   def to_s
-    getName
+    name
   end
 end

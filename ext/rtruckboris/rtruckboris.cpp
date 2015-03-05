@@ -1829,21 +1829,19 @@ int SWIG_Ruby_arity( VALUE proc, int minimal )
 #define SWIGTYPE_p_clang__QualType swig_types[18]
 #define SWIGTYPE_p_clang__SourceManager swig_types[19]
 #define SWIGTYPE_p_clang__TagDecl swig_types[20]
-#define SWIGTYPE_p_clang__Type swig_types[21]
-#define SWIGTYPE_p_clang__TypedefDecl swig_types[22]
-#define SWIGTYPE_p_difference_type swig_types[23]
-#define SWIGTYPE_p_p_void swig_types[24]
-#define SWIGTYPE_p_size_type swig_types[25]
-#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[26]
-#define SWIGTYPE_p_std__vectorT_TruckBoris__TagDeclaration_std__allocatorT_TruckBoris__TagDeclaration_t_t swig_types[27]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[28]
-#define SWIGTYPE_p_swig__ConstIterator swig_types[29]
-#define SWIGTYPE_p_swig__GC_VALUE swig_types[30]
-#define SWIGTYPE_p_swig__Iterator swig_types[31]
-#define SWIGTYPE_p_value_type swig_types[32]
-#define SWIGTYPE_p_void swig_types[33]
-static swig_type_info *swig_types[35];
-static swig_module_info swig_module = {swig_types, 34, 0, 0, 0, 0};
+#define SWIGTYPE_p_clang__TypedefDecl swig_types[21]
+#define SWIGTYPE_p_difference_type swig_types[22]
+#define SWIGTYPE_p_p_void swig_types[23]
+#define SWIGTYPE_p_size_type swig_types[24]
+#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[25]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[26]
+#define SWIGTYPE_p_swig__ConstIterator swig_types[27]
+#define SWIGTYPE_p_swig__GC_VALUE swig_types[28]
+#define SWIGTYPE_p_swig__Iterator swig_types[29]
+#define SWIGTYPE_p_value_type swig_types[30]
+#define SWIGTYPE_p_void swig_types[31]
+static swig_type_info *swig_types[33];
+static swig_module_info swig_module = {swig_types, 32, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -8106,7 +8104,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Type_withConst(int argc, VALUE *argv, VALUE self) {
+_wrap_Type_with_const(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8130,7 +8128,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Type_withVolatile(int argc, VALUE *argv, VALUE self) {
+_wrap_Type_with_volatile(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8154,7 +8152,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Type_withRestrict(int argc, VALUE *argv, VALUE self) {
+_wrap_Type_with_restrict(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8202,7 +8200,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Type_getUnqualifiedType(int argc, VALUE *argv, VALUE self) {
+_wrap_Type_unqualified_type(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8226,7 +8224,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Type_getLocalUnqualifiedType(int argc, VALUE *argv, VALUE self) {
+_wrap_Type_local_unqualified_type(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8250,7 +8248,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Type_getLocallyUnqualifiedSingleStepDesugaredType(int argc, VALUE *argv, VALUE self) {
+_wrap_Type_locally_unqualified_single_step_desugared_type(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8274,7 +8272,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Type_getNonReferenceType(int argc, VALUE *argv, VALUE self) {
+_wrap_Type_non_reference_type(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8298,7 +8296,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Type_isEmpty(int argc, VALUE *argv, VALUE self) {
+_wrap_Type_is_empty(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8315,110 +8313,6 @@ _wrap_Type_isEmpty(int argc, VALUE *argv, VALUE self) {
   arg1 = reinterpret_cast< TruckBoris::Type * >(argp1);
   result = (bool)((TruckBoris::Type const *)arg1)->isEmpty();
   vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_Type_setClangQualType(int argc, VALUE *argv, VALUE self) {
-  TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
-  clang::QualType *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_TruckBoris__Type, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Type *","setClangQualType", 1, self )); 
-  }
-  arg1 = reinterpret_cast< TruckBoris::Type * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_clang__QualType,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "clang::QualType const &","setClangQualType", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "clang::QualType const &","setClangQualType", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< clang::QualType * >(argp2);
-  (arg1)->setClangQualType((clang::QualType const &)*arg2);
-  return Qnil;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_Type_getClangQualType(int argc, VALUE *argv, VALUE self) {
-  TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  clang::QualType result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_TruckBoris__Type, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Type const *","getClangQualType", 1, self )); 
-  }
-  arg1 = reinterpret_cast< TruckBoris::Type * >(argp1);
-  result = ((TruckBoris::Type const *)arg1)->getClangQualType();
-  vresult = SWIG_NewPointerObj((new clang::QualType(static_cast< const clang::QualType& >(result))), SWIGTYPE_p_clang__QualType, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_Type_getClangTypePtr(int argc, VALUE *argv, VALUE self) {
-  TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  clang::Type *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_TruckBoris__Type, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Type const *","getClangTypePtr", 1, self )); 
-  }
-  arg1 = reinterpret_cast< TruckBoris::Type * >(argp1);
-  result = (clang::Type *)((TruckBoris::Type const *)arg1)->getClangTypePtr();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_clang__Type, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_Type_getClangTypeClassName(int argc, VALUE *argv, VALUE self) {
-  TruckBoris::Type *arg1 = (TruckBoris::Type *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  std::string result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_TruckBoris__Type, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Type const *","getClangTypeClassName", 1, self )); 
-  }
-  arg1 = reinterpret_cast< TruckBoris::Type * >(argp1);
-  result = ((TruckBoris::Type const *)arg1)->getClangTypeClassName();
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -10245,7 +10139,7 @@ free_TruckBoris_HeaderParser(TruckBoris::HeaderParser *arg1) {
 }
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_addSourceFile(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_add_source_file(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   std::string arg2 ;
   void *argp1 = 0 ;
@@ -10279,7 +10173,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_addSearchPath(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_add_search_path(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   std::string arg2 ;
   void *argp1 = 0 ;
@@ -10310,7 +10204,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_addSearchPaths(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_add_search_paths(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   std::vector< std::string,std::allocator< std::string > > arg2 ;
   void *argp1 = 0 ;
@@ -10770,7 +10664,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_getSourceFile(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_source_file(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10794,7 +10688,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_getHeadersPaths(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_headers_paths(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10818,31 +10712,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_HeaderParser_getClasses(int argc, VALUE *argv, VALUE self) {
-  TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  SwigValueWrapper< std::vector< TruckBoris::TagDeclaration,std::allocator< TruckBoris::TagDeclaration > > > result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_TruckBoris__HeaderParser, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::HeaderParser const *","getClasses", 1, self )); 
-  }
-  arg1 = reinterpret_cast< TruckBoris::HeaderParser * >(argp1);
-  result = ((TruckBoris::HeaderParser const *)arg1)->getClasses();
-  vresult = SWIG_NewPointerObj((new std::vector< TruckBoris::TagDeclaration,std::allocator< TruckBoris::TagDeclaration > >(static_cast< const std::vector< TruckBoris::TagDeclaration,std::allocator< TruckBoris::TagDeclaration > >& >(result))), SWIGTYPE_p_std__vectorT_TruckBoris__TagDeclaration_std__allocatorT_TruckBoris__TagDeclaration_t_t, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HeaderParser_isInitialized(int argc, VALUE *argv, VALUE self) {
+_wrap_HeaderParser_is_initialized(int argc, VALUE *argv, VALUE self) {
   TruckBoris::HeaderParser *arg1 = (TruckBoris::HeaderParser *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10901,13 +10771,11 @@ static swig_type_info _swigt__p_clang__ParmVarDecl = {"_p_clang__ParmVarDecl", "
 static swig_type_info _swigt__p_clang__QualType = {"_p_clang__QualType", "clang::QualType *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_clang__SourceManager = {"_p_clang__SourceManager", "clang::SourceManager *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_clang__TagDecl = {"_p_clang__TagDecl", "clang::TagDecl *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_clang__Type = {"_p_clang__Type", "clang::Type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_clang__TypedefDecl = {"_p_clang__TypedefDecl", "clang::TypedefDecl *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_difference_type = {"_p_difference_type", "difference_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_void = {"_p_p_void", "void **|VALUE *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_size_type = {"_p_size_type", "size_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__allocatorT_std__string_t = {"_p_std__allocatorT_std__string_t", "std::vector< std::string >::allocator_type *|std::allocator< std::string > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_TruckBoris__TagDeclaration_std__allocatorT_TruckBoris__TagDeclaration_t_t = {"_p_std__vectorT_TruckBoris__TagDeclaration_std__allocatorT_TruckBoris__TagDeclaration_t_t", "std::vector< TruckBoris::TagDeclaration,std::allocator< TruckBoris::TagDeclaration > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t = {"_p_std__vectorT_std__string_std__allocatorT_std__string_t_t", "std::vector< std::string,std::allocator< std::string > > *|std::vector< std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_swig__ConstIterator = {"_p_swig__ConstIterator", "swig::ConstIterator *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_swig__GC_VALUE = {"_p_swig__GC_VALUE", "swig::GC_VALUE *", 0, 0, (void*)0, 0};
@@ -10937,13 +10805,11 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_clang__QualType,
   &_swigt__p_clang__SourceManager,
   &_swigt__p_clang__TagDecl,
-  &_swigt__p_clang__Type,
   &_swigt__p_clang__TypedefDecl,
   &_swigt__p_difference_type,
   &_swigt__p_p_void,
   &_swigt__p_size_type,
   &_swigt__p_std__allocatorT_std__string_t,
-  &_swigt__p_std__vectorT_TruckBoris__TagDeclaration_std__allocatorT_TruckBoris__TagDeclaration_t_t,
   &_swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t,
   &_swigt__p_swig__ConstIterator,
   &_swigt__p_swig__GC_VALUE,
@@ -10973,13 +10839,11 @@ static swig_cast_info _swigc__p_clang__ParmVarDecl[] = {  {&_swigt__p_clang__Par
 static swig_cast_info _swigc__p_clang__QualType[] = {  {&_swigt__p_clang__QualType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_clang__SourceManager[] = {  {&_swigt__p_clang__SourceManager, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_clang__TagDecl[] = {  {&_swigt__p_clang__TagDecl, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_clang__Type[] = {  {&_swigt__p_clang__Type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_clang__TypedefDecl[] = {  {&_swigt__p_clang__TypedefDecl, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_difference_type[] = {  {&_swigt__p_difference_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_void[] = {  {&_swigt__p_p_void, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_size_type[] = {  {&_swigt__p_size_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__allocatorT_std__string_t[] = {  {&_swigt__p_std__allocatorT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__vectorT_TruckBoris__TagDeclaration_std__allocatorT_TruckBoris__TagDeclaration_t_t[] = {  {&_swigt__p_std__vectorT_TruckBoris__TagDeclaration_std__allocatorT_TruckBoris__TagDeclaration_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_std__string_std__allocatorT_std__string_t_t[] = {  {&_swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_swig__ConstIterator[] = {  {&_swigt__p_swig__ConstIterator, 0, 0, 0},  {&_swigt__p_swig__Iterator, _p_swig__IteratorTo_p_swig__ConstIterator, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_swig__GC_VALUE[] = {  {&_swigt__p_swig__GC_VALUE, 0, 0, 0},{0, 0, 0, 0}};
@@ -11009,13 +10873,11 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_clang__QualType,
   _swigc__p_clang__SourceManager,
   _swigc__p_clang__TagDecl,
-  _swigc__p_clang__Type,
   _swigc__p_clang__TypedefDecl,
   _swigc__p_difference_type,
   _swigc__p_p_void,
   _swigc__p_size_type,
   _swigc__p_std__allocatorT_std__string_t,
-  _swigc__p_std__vectorT_TruckBoris__TagDeclaration_std__allocatorT_TruckBoris__TagDeclaration_t_t,
   _swigc__p_std__vectorT_std__string_std__allocatorT_std__string_t_t,
   _swigc__p_swig__ConstIterator,
   _swigc__p_swig__GC_VALUE,
@@ -11374,19 +11236,15 @@ SWIGEXPORT void Init_rtruckboris(void) {
   rb_define_method(SwigClassType.klass, "initialize", VALUEFUNC(_wrap_new_Type), -1);
   rb_define_method(SwigClassType.klass, "name", VALUEFUNC(_wrap_Type_name), -1);
   rb_define_method(SwigClassType.klass, "is_canonical", VALUEFUNC(_wrap_Type_is_canonical), -1);
-  rb_define_method(SwigClassType.klass, "withConst", VALUEFUNC(_wrap_Type_withConst), -1);
-  rb_define_method(SwigClassType.klass, "withVolatile", VALUEFUNC(_wrap_Type_withVolatile), -1);
-  rb_define_method(SwigClassType.klass, "withRestrict", VALUEFUNC(_wrap_Type_withRestrict), -1);
+  rb_define_method(SwigClassType.klass, "with_const", VALUEFUNC(_wrap_Type_with_const), -1);
+  rb_define_method(SwigClassType.klass, "with_volatile", VALUEFUNC(_wrap_Type_with_volatile), -1);
+  rb_define_method(SwigClassType.klass, "with_restrict", VALUEFUNC(_wrap_Type_with_restrict), -1);
   rb_define_method(SwigClassType.klass, "canonical_type", VALUEFUNC(_wrap_Type_canonical_type), -1);
-  rb_define_method(SwigClassType.klass, "getUnqualifiedType", VALUEFUNC(_wrap_Type_getUnqualifiedType), -1);
-  rb_define_method(SwigClassType.klass, "getLocalUnqualifiedType", VALUEFUNC(_wrap_Type_getLocalUnqualifiedType), -1);
-  rb_define_method(SwigClassType.klass, "getLocallyUnqualifiedSingleStepDesugaredType", VALUEFUNC(_wrap_Type_getLocallyUnqualifiedSingleStepDesugaredType), -1);
-  rb_define_method(SwigClassType.klass, "getNonReferenceType", VALUEFUNC(_wrap_Type_getNonReferenceType), -1);
-  rb_define_method(SwigClassType.klass, "isEmpty", VALUEFUNC(_wrap_Type_isEmpty), -1);
-  rb_define_method(SwigClassType.klass, "setClangQualType", VALUEFUNC(_wrap_Type_setClangQualType), -1);
-  rb_define_method(SwigClassType.klass, "getClangQualType", VALUEFUNC(_wrap_Type_getClangQualType), -1);
-  rb_define_method(SwigClassType.klass, "getClangTypePtr", VALUEFUNC(_wrap_Type_getClangTypePtr), -1);
-  rb_define_method(SwigClassType.klass, "getClangTypeClassName", VALUEFUNC(_wrap_Type_getClangTypeClassName), -1);
+  rb_define_method(SwigClassType.klass, "unqualified_type", VALUEFUNC(_wrap_Type_unqualified_type), -1);
+  rb_define_method(SwigClassType.klass, "local_unqualified_type", VALUEFUNC(_wrap_Type_local_unqualified_type), -1);
+  rb_define_method(SwigClassType.klass, "locally_unqualified_single_step_desugared_type", VALUEFUNC(_wrap_Type_locally_unqualified_single_step_desugared_type), -1);
+  rb_define_method(SwigClassType.klass, "non_reference_type", VALUEFUNC(_wrap_Type_non_reference_type), -1);
+  rb_define_method(SwigClassType.klass, "is_empty", VALUEFUNC(_wrap_Type_is_empty), -1);
   SwigClassType.mark = 0;
   SwigClassType.destroy = (void (*)(void *)) free_TruckBoris_Type;
   SwigClassType.trackObjects = 0;
@@ -11498,9 +11356,9 @@ SWIGEXPORT void Init_rtruckboris(void) {
   SWIG_TypeClientData(SWIGTYPE_p_TruckBoris__HeaderParser, (void *) &SwigClassHeaderParser);
   rb_define_alloc_func(SwigClassHeaderParser.klass, _wrap_HeaderParser_allocate);
   rb_define_method(SwigClassHeaderParser.klass, "initialize", VALUEFUNC(_wrap_new_HeaderParser), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "addSourceFile", VALUEFUNC(_wrap_HeaderParser_addSourceFile), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "addSearchPath", VALUEFUNC(_wrap_HeaderParser_addSearchPath), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "addSearchPaths", VALUEFUNC(_wrap_HeaderParser_addSearchPaths), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "add_source_file", VALUEFUNC(_wrap_HeaderParser_add_source_file), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "add_search_path", VALUEFUNC(_wrap_HeaderParser_add_search_path), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "add_search_paths", VALUEFUNC(_wrap_HeaderParser_add_search_paths), -1);
   rb_define_method(SwigClassHeaderParser.klass, "parse", VALUEFUNC(_wrap_HeaderParser_parse), -1);
   rb_define_method(SwigClassHeaderParser.klass, "lang_opts", VALUEFUNC(_wrap_HeaderParser_lang_opts), -1);
   rb_define_method(SwigClassHeaderParser.klass, "source_manager", VALUEFUNC(_wrap_HeaderParser_source_manager), -1);
@@ -11514,10 +11372,9 @@ SWIGEXPORT void Init_rtruckboris(void) {
   rb_define_method(SwigClassHeaderParser.klass, "get_nth_enum", VALUEFUNC(_wrap_HeaderParser_get_nth_enum), -1);
   rb_define_method(SwigClassHeaderParser.klass, "typedefs_num", VALUEFUNC(_wrap_HeaderParser_typedefs_num), -1);
   rb_define_method(SwigClassHeaderParser.klass, "get_nth_typedef", VALUEFUNC(_wrap_HeaderParser_get_nth_typedef), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "getSourceFile", VALUEFUNC(_wrap_HeaderParser_getSourceFile), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "getHeadersPaths", VALUEFUNC(_wrap_HeaderParser_getHeadersPaths), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "getClasses", VALUEFUNC(_wrap_HeaderParser_getClasses), -1);
-  rb_define_method(SwigClassHeaderParser.klass, "isInitialized", VALUEFUNC(_wrap_HeaderParser_isInitialized), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "source_file", VALUEFUNC(_wrap_HeaderParser_source_file), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "headers_paths", VALUEFUNC(_wrap_HeaderParser_headers_paths), -1);
+  rb_define_method(SwigClassHeaderParser.klass, "is_initialized", VALUEFUNC(_wrap_HeaderParser_is_initialized), -1);
   SwigClassHeaderParser.mark = 0;
   SwigClassHeaderParser.destroy = (void (*)(void *)) free_TruckBoris_HeaderParser;
   SwigClassHeaderParser.trackObjects = 0;

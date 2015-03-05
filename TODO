@@ -26,8 +26,25 @@ done    getCanonicalType          canonical_type
 done    getSourceManager          source_manager
 done    getLangOpts               lang_opts
 
-    Equals                    =
 
 *   check for others functions to rename:
+done    addSourceFile
+done    addSearchPath
+done    addSearchPaths
+done    getSourceFile
+done    getHeadersPaths
+done    getClasses
+done    isInitialized
+
     in Type class
-    in Typedef
+done    withConst
+done    withVolatile
+done    withRestrict
+done    getUnqualifiedType
+done    getLocalUnqualifiedType
+done    getLocallyUnqualifiedSingleStepDesugaredType
+done    getNonReferenceType
+done    isEmpty
+
+* Remaining
+    Equals                    =

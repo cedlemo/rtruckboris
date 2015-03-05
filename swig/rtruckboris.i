@@ -29,6 +29,21 @@ namespace std {
 %rename("%(regex:/^(nb)([A-Z]+.*)/\\l\\2_num/)s") "";
 %rename("%(regex:/^(get)(Function|Enum|Union|Structure|Typedef|Field|Parameter)+/\\1_nth_\\l\\2/)s") "";
 %rename(get_nth_enum_constant) getConstant;
+%rename("%(undercase)s") addSourceFile;
+%rename("%(undercase)s") addSearchPath;
+%rename("%(undercase)s") addSearchPaths;
+%rename("%(undercase)s") isInitialized;
+%rename("%(undercase)s") withConst;
+%rename("%(undercase)s") withVolatile;
+%rename("%(undercase)s") withRestrict;
+%rename("%(undercase)s") isEmpty;
+%rename(unqualified_type) getUnqualifiedType;
+%rename(local_unqualified_type) getLocalUnqualifiedType;
+%rename(locally_unqualified_single_step_desugared_type) getLocallyUnqualifiedSingleStepDesugaredType;
+%rename(non_reference_type) getNonReferenceType;
+%rename(source_file) getSourceFile;
+%rename(headers_paths) getHeadersPaths;
+
 //%rename($ignore) TruckBoris::Structure::getField(int) const;
 //%rename($ignore) TruckBoris::Structure::getFieldsNumber() const;
 %rename($ignore) TruckBoris::Enum::Equals(const Enum& tag);
@@ -49,6 +64,12 @@ namespace std {
 %rename($ignore) TruckBoris::Field::setPtr(clang::FieldDecl * var);
 %rename($ignore) TruckBoris::Type::Equals(const Type& tpe);
 %rename($ignore) TruckBoris::Type::setType(const clang::QualType & type);
+%rename($ignore) TruckBoris::Type::setClangQualType(const clang::QualType & type);
+%rename($ignore) TruckBoris::Type::getClangQualType() const;
+%rename($ignore) TruckBoris::Type::getClangTypePtr() const;
+%rename($ignore) TruckBoris::Type::getClangTypeClassName() const;
+%rename($ignore) TruckBoris::HeaderParser::getClasses() const;
+
 %include "/usr/include/truckboris/Type.h"
 %include "/usr/include/truckboris/Declarations.h"
 %include "/usr/include/truckboris/Function.h"

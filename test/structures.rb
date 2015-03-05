@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + "/../lib/rtruckboris"
+require "rtruckboris"
+#require File.dirname(__FILE__) + "/../lib/rtruckboris"
 
 parser = Rtruckboris::HeaderParser.new("./test_cpp", ["/usr/include"])
 parser.parse
@@ -8,17 +9,17 @@ parser.parse
 structures = parser.getStructures()
 puts "Structures number : #{structures.size}"
 structures.each do |s|
-  puts "Structure Name : #{s.getName}"
-  puts "\thas name for linkage ? #{s.hasNameForLinkage}"  
-  puts "\thas linkage ? #{s.hasLinkage}"  
-  puts "\ttypedef name: #{s.getTypedefName}"
+  puts "Structure Name : #{s.name}"
+  puts "\thas name for linkage ? #{s.has_name_for_linkage}"  
+  puts "\thas linkage ? #{s.has_linkage}"  
+  puts "\ttypedef name: #{s.typedef_name}"
   fields = s.getFields
   puts "\tfield number: #{fields.size}"
   fields.each do |f|
-    puts "\t\t #{f.getType.getName}  #{f.getName}"
+    puts "\t\t #{f.type.name}  #{f.name}"
   end
 end
 
 structures.each do |s|
-  puts s.getRaw(parser.getSourceManager,parser.getLangOpts)
+  puts s.raw(parser.source_manager,parser.lang_opts)
 end

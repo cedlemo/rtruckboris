@@ -4,9 +4,18 @@
     getEnums                  enums
     getUnions                 unions
     getTypedefs               typedefs
-    
-    getName                   name
-    getType                   type
+done    getRaw                    raw
+done    hasNameForLinkage         has_name_for_linkage
+done    getTypedefName            typedef_name
+done    getTagType                tag_type
+done    getValue                  value    
+done    getName                   name
+done    getType                   type
+done    getReturn                 return_type
+done    isCanonical               is_canonical
+done    getCanonicalType          canonical_type
+done    getSourceManager          source_manager
+done    getLangOpts               lang_opts
     getFields                 fields
     getParameters             parameters
     getConstants              enum_constants

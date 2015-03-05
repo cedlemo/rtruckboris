@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + "/../lib/rtruckboris/rtruckboris"
+require File.dirname(__FILE__) + "/../lib/rtruckboris"
 
 gtk_window = "/usr/include/gtk-3.0/gtk/gtkwindow.h"
 headerPaths = `pkg-config --cflags gtk+-3.0`.gsub("-I","").split(" ")
@@ -11,16 +11,18 @@ headerPaths << gccLib
 headerPaths << "/usr/include"
 
 parser = Rtruckboris::HeaderParser.new(gtk_window, headerPaths)
-parser.parse(true)
-
+if(!parser.parse(true))
+  puts "Whada fock??"
+  exit
+end
 functions = parser.getFunctions()
 puts "Functions number : #{functions.size}"
 functions.each do |f|
-  puts "Name : #{f.getName}"
-  puts "Return : #{f.getReturn.getName}"
+  puts "Name : #{f.name}"
+  puts "Return : #{f.return_type.name}"
   params = f.getParameters
   puts "\t #{params.size.to_s} parameters :"
   params.each do |p|
-    puts "\t\t#{p.getType.getName}  #{p.getName}"
+    puts "\t\t#{p.type.name}  #{p.name}"
   end
 end

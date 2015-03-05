@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-require File.dirname(__FILE__) + "/../lib/rtruckboris"
+require "rtruckboris"
+#require File.dirname(__FILE__) + "/../lib/rtruckboris"
 
 parser = Rtruckboris::HeaderParser.new("./test_cpp", ["/usr/include"])
 if (!parser.parse) then 
@@ -11,18 +12,18 @@ end
 enums = parser.getEnums()
 puts "Enums number : #{enums.size}"
 enums.each do |e|
-  puts "Enum Name : #{e.getName}"
-  puts "\thas name for linkage ? #{e.hasNameForLinkage}"  
-  puts "\thas linkage ? #{e.hasLinkage}"  
-  puts "\ttypedef name: #{e.getTypedefName}"
+  puts "Enum Name : #{e.name}"
+  puts "\thas name for linkage ? #{e.has_name_for_linkage}"  
+  puts "\thas linkage ? #{e.has_linkage}"  
+  puts "\ttypedef name: #{e.typedef_name}"
   constants = e.getConstants
   print "\t\t"
   constants.each do |c|
-    print "#{c.getName} #{c.getValue}  "
+    print "#{c.name} #{c.value}  "
   end
   puts""
 end
 
 enums.each do |e|
-  puts e.getRaw(parser.getSourceManager, parser.getLangOpts)
+  puts e.raw(parser.source_manager, parser.lang_opts)
 end

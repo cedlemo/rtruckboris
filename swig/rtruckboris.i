@@ -7,21 +7,25 @@
 #include "HeaderParser.h"
 /*--ENDSWIGINCLUDE*/
 %}
-//%trackobjects;
-//%markfunc HeaderParser "mark_HeaderParser";
 namespace std {
-//  %template(VectorEnum) vector<TruckBoris::Enum>;
-//  %template(VectorEnumConstant) vector<TruckBoris::EnumConstant>;
-//  %template(VectorFunction) vector<TruckBoris::Function>;
-//  %template(VectorParameter) vector<TruckBoris::Parameter>;
-//  %template(VectorStructure) vector<TruckBoris::Structure>;
-//  %template(VectorField) vector<TruckBoris::Field>;
-//  %template(VectorTypedef) vector<TruckBoris::Typedef>;
   %template(VectorString) vector<string>;
 }; 
 %import "/usr/include/clang/AST/ASTConsumer.h"
 %rename($ignore) *::getPtr() const;
 %rename($ignore) TruckBoris::Structure::Equals(const Structure& tag);
+%rename(name) getName;
+%rename(type) getType;
+%rename(raw) getRaw;
+%rename(has_name_for_linkage) hasNameForLinkage;
+%rename(has_linkage) hasLinkage;
+%rename(typedef_name) getTypedefName;
+%rename(tag_type) getTagType;
+%rename(value) getValue;
+%rename(return_type) getReturn;
+%rename(is_canonical) isCanonical;
+%rename(canonical_type) getCanonicalType;
+%rename(source_manager) getSourceManager;
+%rename(lang_opts) getLangOpts;
 //%rename($ignore) TruckBoris::Structure::getField(int) const;
 //%rename($ignore) TruckBoris::Structure::getFieldsNumber() const;
 %rename($ignore) TruckBoris::Enum::Equals(const Enum& tag);
@@ -47,23 +51,3 @@ namespace std {
 %include "/usr/include/truckboris/Function.h"
 %import "/usr/include/truckboris/HeaderElements.h"
 %include "/usr/include/truckboris/HeaderParser.h"
-//%header %{
-//static void mark_HeaderParser(void* ptr) {
-//  TruckBoris::HeaderParser* hp = (TruckBoris::HeaderParser*) ptr;
-//  /* Loop over each object and tell the garbage collector
-//  that we are holding a reference to them. */
-//  std::vector<TruckBoris::Function> fns;
-//  fns = hp->getFunctions();
-//  int count = fns.size();
-// 
-//  for(int i = 0; i < count; ++i) {
-//    TruckBoris::Function fn = fns[i];
-//  std::cout <<  "##########################---marked####################"<<fn.getName() << std::endl;
-//    VALUE object = SWIG_RubyInstanceFor(&fn);
-// 
-//    if (object != Qnil) {
-//      rb_gc_mark(object);
-//    }
-//  }
-//}
-//%}

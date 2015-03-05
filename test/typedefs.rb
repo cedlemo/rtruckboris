@@ -8,12 +8,12 @@ parser.parse
 typedefs = parser.getTypedefs()
 puts "Typedefs numbers : #{typedefs.size}"
 typedefs.each do |t|
-  puts "Typedef Name : #{t.getName}"
-  puts "Typedef Type : #{t.getType.getName}"
-  puts "Typedef is Canonical : #{t.getType.isCanonical}"
-  puts "Canonical name : #{t.getType.getCanonicalType.getName}"
+  puts "Typedef Name : #{t.name}"
+  puts "Typedef Type : #{t.type.name}"
+  puts "Typedef is Canonical : #{t.type.is_canonical}"
+  puts "Canonical name : #{t.type.canonical_type.name}"
 end
 
 typedefs.each do |t|
-  puts t.getRaw(parser.getSourceManager,parser.getLangOpts)
+  puts t.raw(parser.source_manager,parser.lang_opts)
 end

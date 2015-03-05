@@ -27,41 +27,41 @@ Classes Names
 	getTagType
 	getConstants
 >>Parser::Function
-	getName
-	getReturn
+	name
+	return_type
 	getParameters
-	getRaw
+	raw
 >>Parser::TagDeclaration
-	getName
+	name
 	hasNameForLinkage
 	hasLinkage
-	getTypedefName
-	getRaw
+	typedefName
+	raw
 >>Parser::Typedef
-	getName
-	getType
-	getRaw
+	name
+	type
+	raw
 >>Parser::EnumConstant
-	getName
+	name
 	getValue
 >>Parser::Parameter
 	Equals
-	getName
-	getType
+	name
+	type
 >>Parser::Field
-	getName
-	getType
+	name
+	type
 >>Parser::Type
-	getName
-	isCanonical
-	getCanonicalType
+	name
+	is_canonical
+	canonical_type
 	isEmpty
 >>Parser::HeaderParser
 	parse
-	getLangOpts
-	getSourceManager
+	lang_opts
+	source_manager
 	getFunctions
 	getStructures
 	getUnions
 	getEnums
-	getTypedefs
+	typedefs

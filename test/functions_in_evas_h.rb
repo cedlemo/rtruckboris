@@ -15,25 +15,25 @@ parser.parse
 structures = parser.getStructures()
 puts "Structures number : #{structures.size}"
 structures.each do |s|
-  puts "Structure Name : #{s.getName}"
+  puts "Structure Name : #{s.name}"
 #  puts "\thas name for linkage ? #{s.hasNameForLinkage}"  
 #  puts "\thas linkage ? #{s.hasLinkage}"  
-#  puts "\ttypedef name: #{s.getTypedefName}"
+#  puts "\ttypedef name: #{s.typedefName}"
 #  fields = s.getFields
 #  puts "\tfield number: #{fields.size}"
 #  fields.each do |f|
-#    puts "\t\t #{f.getType.getName}  #{f.getName}"
+#    puts "\t\t #{f.type.name}  #{f.name}"
 #  end
 end
 
 functions = parser.getFunctions()
 puts "Functions number : #{functions.size}"
 functions.each do |f|
-  puts "Name : #{f.getName}"
-  puts "Return : #{f.getReturn.getName}"
+  puts "Name : #{f.name}"
+  puts "Return : #{f.return_type.name}"
   params = f.getParameters
   puts "\t #{params.size.to_s} parameters :"
   params.each do |p|
-    puts "\t\t#{p.getType.getName}  #{p.getName}"
+    puts "\t\t#{p.type.name}  #{p.name}"
   end
 end

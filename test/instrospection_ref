@@ -34,59 +34,59 @@ Classes Names
 	getConstant
 >>Parser::Function
 	Equals
-	getName
-	getReturn
+	name
+	return_type
 	setPtr
 	getPtr
 	getParamsNumber
 	getParameters
 	getParameter
-	getRaw
+	raw
 >>Parser::TagDeclaration
 	setPtr
 	getPtr
-	getName
+	name
 	hasNameForLinkage
 	hasLinkage
-	getTypedefName
-	getRaw
+	typedefName
+	raw
 	Equals
 >>Parser::Typedef
 	Equals
 	setPtr
 	getPtr
-	getName
-	getType
-	getRaw
+	name
+	type
+	raw
 >>Parser::EnumConstant
 	Equals
 	setPtr
 	getPtr
-	getName
+	name
 	getValue
 >>Parser::Parameter
 	Equals
 	setPtr
 	getPtr
-	getName
-	getType
+	name
+	type
 >>Parser::Field
 	Equals
 	setPtr
 	getPtr
-	getName
-	getType
+	name
+	type
 >>Parser::Type
 	Equals
 	setType
-	getName
-	isCanonical
-	getCanonicalType
+	name
+	is_canonical
+	canonical_type
 	isEmpty
 >>Parser::HeaderParser
 	parse
-	getLangOpts
-	getSourceManager
+	lang_opts
+	source_manager
 	printFunctionsNames
 	printStructuresNames
 	printUnionsNames
@@ -96,9 +96,9 @@ Classes Names
 	getStructuresNumber
 	getUnionsNumber
 	getEnumsNumber
-	getTypedefsNumber
+	typedefsNumber
 	getFunctions
 	getStructures
 	getUnions
 	getEnums
-	getTypedefs
+	typedefs

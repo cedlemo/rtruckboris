@@ -13,20 +13,20 @@ parser.parse
 functions = parser.getFunctions()
 puts "Functions number : #{functions.size}"
 functions.each do |f|
-  puts "Name : #{f.getName}"
-  puts "Return : #{f.getReturn.getName}"
-  params = f.getParameters
+  puts "Name : #{f.name}"
+  puts "Return : #{f.return.name}"
+  params = f.parameters
   puts "\t #{params.size.to_s} parameters :"
   params.each do |p|
-    puts "\t\t#{p.getType.getName}  #{p.getName}"
-    if(!p.getType.isCanonical)
-      puts "\t\t\t#{p.getType.getCanonicalType.getName}"
+    puts "\t\t#{p.type.name}  #{p.name}"
+    if(!p.type.is_canonical)
+      puts "\t\t\t#{p.type.canonical_type.name}"
     end
   end
 end
 
 functions.each do |f|
-  puts f.getRaw(parser.getSourceManager,parser.getLangOpts)
+  puts f.raw(parser.source_manager,parser.lang_opts)
 end
 ```
 

@@ -44,31 +44,29 @@ namespace std {
 %rename(source_file) getSourceFile;
 %rename(headers_paths) getHeadersPaths;
 
-//%rename($ignore) TruckBoris::Structure::getField(int) const;
-//%rename($ignore) TruckBoris::Structure::getFieldsNumber() const;
-%rename($ignore) TruckBoris::Enum::Equals(const Enum& tag);
-//%rename($ignore) TruckBoris::Enum::getConstantsNumber() const;
-//%rename($ignore) TruckBoris::Enum::getConstant(int i) const;
 %rename($ignore) TruckBoris::Function::setPtr(clang::FunctionDecl * fn);
 %rename($ignore) TruckBoris::Function::getParameters() const;
-%rename($ignore) TruckBoris::Function::Equals(const Function& fn);
 %rename($ignore) TruckBoris::TagDeclaration::setPtr(clang::TagDecl * var);
 %rename($ignore) TruckBoris::TagDeclaration::Equals( const TagDeclaration & tag);
-%rename($ignore) TruckBoris::Typedef::Equals( const Typedef& tpd);
 %rename($ignore) TruckBoris::Typedef::setPtr(clang::TypedefDecl * var);
-%rename($ignore) TruckBoris::EnumConstant::Equals(const EnumConstant& cst);
 %rename($ignore) TruckBoris::EnumConstant::setPtr(clang::EnumConstantDecl * constant);
-%rename($ignore) TruckBoris::Parameter::Equals(const Constant& pdc);
 %rename($ignore) TruckBoris::Parameter::setPtr(clang::ParmVarDecl * var);
-%rename($ignore) TruckBoris::Field::Equals(const Field& fld);
 %rename($ignore) TruckBoris::Field::setPtr(clang::FieldDecl * var);
-%rename($ignore) TruckBoris::Type::Equals(const Type& tpe);
 %rename($ignore) TruckBoris::Type::setType(const clang::QualType & type);
 %rename($ignore) TruckBoris::Type::setClangQualType(const clang::QualType & type);
 %rename($ignore) TruckBoris::Type::getClangQualType() const;
 %rename($ignore) TruckBoris::Type::getClangTypePtr() const;
 %rename($ignore) TruckBoris::Type::getClangTypeClassName() const;
 %rename($ignore) TruckBoris::HeaderParser::getClasses() const;
+
+%rename($ignore) TruckBoris::Structure::Equals(const Structure& tag);
+%rename($ignore) TruckBoris::Enum::Equals(const Enum& tag);
+%rename($ignore) TruckBoris::Type::Equals(const Type& tpe);
+%rename($ignore) TruckBoris::Field::Equals(const Field& fld);
+%rename($ignore) TruckBoris::Typedef::Equals( const Typedef& tpd);
+%rename($ignore) TruckBoris::Function::Equals(const Function& fn);
+%rename($ignore) TruckBoris::Parameter::Equals(const Constant& pdc);
+%rename($ignore) TruckBoris::EnumConstant::Equals(const EnumConstant& cst);
 
 %include "/usr/include/truckboris/Type.h"
 %include "/usr/include/truckboris/Declarations.h"

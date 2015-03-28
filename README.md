@@ -10,7 +10,7 @@ require 'rtruckboris'
 parser = Rtruckboris::HeaderParser.new("a_file.h", ["/usr/include"])
 parser.parse
 
-functions = parser.getFunctions()
+functions = parser.functions
 puts "Functions number : #{functions.size}"
 functions.each do |f|
   puts "Name : #{f.name}"

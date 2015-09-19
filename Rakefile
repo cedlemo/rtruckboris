@@ -1,9 +1,10 @@
 require "rubygems"
 require "rake/extensiontask"
 
-#current_dir = File.dirname(__FILE__)
-#src_dir = current_dir + "/ext/rtruckboris"
-#swig_dir = current_dir + "/swig"
+current_dir = File.dirname(__FILE__)
+src_dir = current_dir + "/ext/rtruckboris"
+swig_dir = current_dir + "/swig"
+
 task :swig do 
   puts "==> Generate the rtruckboris.cpp file with swig"
   sh "swig -c++ -ruby -o #{src_dir}/rtruckboris.cpp #{swig_dir}/rtruckboris.i"

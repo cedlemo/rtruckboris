@@ -4467,6 +4467,29 @@ SWIGINTERN VALUE std_vector_Sl_std_string_Sg____delete__(std::vector< std::strin
   }
 
 SWIGINTERNINLINE VALUE
+SWIG_From_unsigned_SS_int  (unsigned int value)
+{    
+  return SWIG_From_unsigned_SS_long  (value);
+}
+
+
+SWIGINTERN int
+SWIG_AsVal_unsigned_SS_int (VALUE obj, unsigned int *val)
+{
+  unsigned long v;
+  int res = SWIG_AsVal_unsigned_SS_long (obj, &v);
+  if (SWIG_IsOK(res)) {
+    if ((v > UINT_MAX)) {
+      return SWIG_OverflowError;
+    } else {
+      if (val) *val = static_cast< unsigned int >(v);
+    }
+  }  
+  return res;
+}
+
+
+SWIGINTERNINLINE VALUE
 SWIG_From_int  (int value)
 {    
   return SWIG_From_long  (value);
@@ -9211,7 +9234,7 @@ _wrap_Structure_fields_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Structure *arg1 = (TruckBoris::Structure *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  int result;
+  unsigned int result;
   VALUE vresult = Qnil;
   
   if ((argc < 0) || (argc > 0)) {
@@ -9222,8 +9245,8 @@ _wrap_Structure_fields_num(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Structure const *","nbFields", 1, self )); 
   }
   arg1 = reinterpret_cast< TruckBoris::Structure * >(argp1);
-  result = (int)((TruckBoris::Structure const *)arg1)->nbFields();
-  vresult = SWIG_From_int(static_cast< int >(result));
+  result = (unsigned int)((TruckBoris::Structure const *)arg1)->nbFields();
+  vresult = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return vresult;
 fail:
   return Qnil;
@@ -9233,10 +9256,10 @@ fail:
 SWIGINTERN VALUE
 _wrap_Structure_get_nth_field(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Structure *arg1 = (TruckBoris::Structure *) 0 ;
-  int arg2 ;
+  unsigned int arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  int val2 ;
+  unsigned int val2 ;
   int ecode2 = 0 ;
   TruckBoris::Field result;
   VALUE vresult = Qnil;
@@ -9249,11 +9272,11 @@ _wrap_Structure_get_nth_field(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Structure const *","getField", 1, self )); 
   }
   arg1 = reinterpret_cast< TruckBoris::Structure * >(argp1);
-  ecode2 = SWIG_AsVal_int(argv[0], &val2);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(argv[0], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "int","getField", 2, argv[0] ));
+    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "unsigned int","getField", 2, argv[0] ));
   } 
-  arg2 = static_cast< int >(val2);
+  arg2 = static_cast< unsigned int >(val2);
   result = ((TruckBoris::Structure const *)arg1)->getField(arg2);
   vresult = SWIG_NewPointerObj((new TruckBoris::Field(static_cast< const TruckBoris::Field& >(result))), SWIGTYPE_p_TruckBoris__Field, SWIG_POINTER_OWN |  0 );
   return vresult;
@@ -9420,7 +9443,7 @@ _wrap_Union_fields_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Union *arg1 = (TruckBoris::Union *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  int result;
+  unsigned int result;
   VALUE vresult = Qnil;
   
   if ((argc < 0) || (argc > 0)) {
@@ -9431,8 +9454,8 @@ _wrap_Union_fields_num(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Union const *","nbFields", 1, self )); 
   }
   arg1 = reinterpret_cast< TruckBoris::Union * >(argp1);
-  result = (int)((TruckBoris::Union const *)arg1)->nbFields();
-  vresult = SWIG_From_int(static_cast< int >(result));
+  result = (unsigned int)((TruckBoris::Union const *)arg1)->nbFields();
+  vresult = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return vresult;
 fail:
   return Qnil;
@@ -9442,10 +9465,10 @@ fail:
 SWIGINTERN VALUE
 _wrap_Union_get_nth_field(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Union *arg1 = (TruckBoris::Union *) 0 ;
-  int arg2 ;
+  unsigned int arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  int val2 ;
+  unsigned int val2 ;
   int ecode2 = 0 ;
   TruckBoris::Field result;
   VALUE vresult = Qnil;
@@ -9458,11 +9481,11 @@ _wrap_Union_get_nth_field(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Union const *","getField", 1, self )); 
   }
   arg1 = reinterpret_cast< TruckBoris::Union * >(argp1);
-  ecode2 = SWIG_AsVal_int(argv[0], &val2);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(argv[0], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "int","getField", 2, argv[0] ));
+    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "unsigned int","getField", 2, argv[0] ));
   } 
-  arg2 = static_cast< int >(val2);
+  arg2 = static_cast< unsigned int >(val2);
   result = ((TruckBoris::Union const *)arg1)->getField(arg2);
   vresult = SWIG_NewPointerObj((new TruckBoris::Field(static_cast< const TruckBoris::Field& >(result))), SWIGTYPE_p_TruckBoris__Field, SWIG_POINTER_OWN |  0 );
   return vresult;
@@ -9736,7 +9759,7 @@ _wrap_Enum_constants_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Enum *arg1 = (TruckBoris::Enum *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  int result;
+  unsigned int result;
   VALUE vresult = Qnil;
   
   if ((argc < 0) || (argc > 0)) {
@@ -9747,8 +9770,8 @@ _wrap_Enum_constants_num(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Enum const *","nbConstants", 1, self )); 
   }
   arg1 = reinterpret_cast< TruckBoris::Enum * >(argp1);
-  result = (int)((TruckBoris::Enum const *)arg1)->nbConstants();
-  vresult = SWIG_From_int(static_cast< int >(result));
+  result = (unsigned int)((TruckBoris::Enum const *)arg1)->nbConstants();
+  vresult = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return vresult;
 fail:
   return Qnil;
@@ -9758,10 +9781,10 @@ fail:
 SWIGINTERN VALUE
 _wrap_Enum_get_nth_enum_constant(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Enum *arg1 = (TruckBoris::Enum *) 0 ;
-  int arg2 ;
+  unsigned int arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  int val2 ;
+  unsigned int val2 ;
   int ecode2 = 0 ;
   TruckBoris::EnumConstant result;
   VALUE vresult = Qnil;
@@ -9774,11 +9797,11 @@ _wrap_Enum_get_nth_enum_constant(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Enum const *","getConstant", 1, self )); 
   }
   arg1 = reinterpret_cast< TruckBoris::Enum * >(argp1);
-  ecode2 = SWIG_AsVal_int(argv[0], &val2);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(argv[0], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "int","getConstant", 2, argv[0] ));
+    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "unsigned int","getConstant", 2, argv[0] ));
   } 
-  arg2 = static_cast< int >(val2);
+  arg2 = static_cast< unsigned int >(val2);
   result = ((TruckBoris::Enum const *)arg1)->getConstant(arg2);
   vresult = SWIG_NewPointerObj((new TruckBoris::EnumConstant(static_cast< const TruckBoris::EnumConstant& >(result))), SWIGTYPE_p_TruckBoris__EnumConstant, SWIG_POINTER_OWN |  0 );
   return vresult;
@@ -9958,7 +9981,7 @@ _wrap_Function_parameters_num(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Function *arg1 = (TruckBoris::Function *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  int result;
+  unsigned int result;
   VALUE vresult = Qnil;
   
   if ((argc < 0) || (argc > 0)) {
@@ -9969,8 +9992,8 @@ _wrap_Function_parameters_num(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Function const *","nbParameters", 1, self )); 
   }
   arg1 = reinterpret_cast< TruckBoris::Function * >(argp1);
-  result = (int)((TruckBoris::Function const *)arg1)->nbParameters();
-  vresult = SWIG_From_int(static_cast< int >(result));
+  result = (unsigned int)((TruckBoris::Function const *)arg1)->nbParameters();
+  vresult = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
   return vresult;
 fail:
   return Qnil;
@@ -9980,10 +10003,10 @@ fail:
 SWIGINTERN VALUE
 _wrap_Function_get_nth_parameter(int argc, VALUE *argv, VALUE self) {
   TruckBoris::Function *arg1 = (TruckBoris::Function *) 0 ;
-  int arg2 ;
+  unsigned int arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  int val2 ;
+  unsigned int val2 ;
   int ecode2 = 0 ;
   TruckBoris::Parameter result;
   VALUE vresult = Qnil;
@@ -9996,11 +10019,11 @@ _wrap_Function_get_nth_parameter(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "TruckBoris::Function const *","getParameter", 1, self )); 
   }
   arg1 = reinterpret_cast< TruckBoris::Function * >(argp1);
-  ecode2 = SWIG_AsVal_int(argv[0], &val2);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(argv[0], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "int","getParameter", 2, argv[0] ));
+    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "unsigned int","getParameter", 2, argv[0] ));
   } 
-  arg2 = static_cast< int >(val2);
+  arg2 = static_cast< unsigned int >(val2);
   result = ((TruckBoris::Function const *)arg1)->getParameter(arg2);
   vresult = SWIG_NewPointerObj((new TruckBoris::Parameter(static_cast< const TruckBoris::Parameter& >(result))), SWIGTYPE_p_TruckBoris__Parameter, SWIG_POINTER_OWN |  0 );
   return vresult;

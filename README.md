@@ -2,7 +2,7 @@
 
 With rtruckboris, you can easily parse C headers files in pure Ruby.
 
-```Ruby
+```ruby
 #!/usr/bin/env ruby
 
 require 'rtruckboris'
@@ -34,7 +34,7 @@ end
 
 ### Dependencies
 rtruckboris is a ruby extension for the truckboris library so you need to install
-it (https://github.com/cedlemo/truckboris) and its dependencies (LLVM and Clang >= 3.4).
+it (https://github.com/cedlemo/truckboris) and its dependencies (LLVM and Clang >= 3.4 to 3.8).
 
 You will need to install :
 *    Ruby
